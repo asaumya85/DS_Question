@@ -1,0 +1,36 @@
+Fibooacci Series and Number
+
+SERIES:
+                            Input: ‘n’ = 5
+                            Output: 0 1 1 2 3
+from typing import List
+
+def generateFibonacciNumbers(n: int) -> List[int]: 
+    # Write your code here
+    p=1
+    q=0
+    lis=[]
+    if(n==1):
+        lis.append(q)
+    else:
+        lis.append(q)
+        lis.append(p)
+        for i in range(2,n):
+            cur=q+p
+            q=p
+            p=cur           
+            lis.append(cur)
+    return lis
+
+NUMBER:
+        Input: ‘n’ = 5
+        output: 3
+
+class Solution {
+    public int fib(int n) {
+        if(n==0 || n==1)
+            return n;
+
+        return fib(n-1)+fib(n-2);
+    }
+}
